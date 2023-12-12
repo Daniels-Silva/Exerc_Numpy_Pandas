@@ -4,12 +4,9 @@ import numpy as np
 #Função que simula o jogo de dado e soma os resultados da rodada e atribui em um Array
 def doisDados():
     resultArray = np.array([])
-    dados = np.random.randint(1,7, (2,2))
-    resultado_um = sum(dados[0])
-    resultado_dois = sum(dados[1])
-    resultArray = np.append(resultArray,resultado_um)
-    resultArray = np.append(resultArray,resultado_dois)
-
+    dados = np.random.randint(1,7, (2,1))
+    resultado = sum(dados)
+    resultArray = np.append(resultArray,resultado)
   
     return resultArray
 
