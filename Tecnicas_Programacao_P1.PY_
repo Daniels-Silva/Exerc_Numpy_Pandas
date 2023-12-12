@@ -1,7 +1,6 @@
-import random 
 import numpy as np
 
-#Função que simula o jogo de dado e soma os resultados da rodada e atribui em um Array
+#Função que simula o jogo de dado e soma os resultados de rodada e atribui em um Array
 def doisDados():
     resultArray = np.array([])
     dados = np.random.randint(1,7, (2,1))
@@ -18,18 +17,18 @@ for i in range (1000):
     if i < 1001:
         resultados = np.append(resultados, doisDados())
 
-
-print('Média: ', media, '\nMáximo: ', maximo, '\nMinimo: ', minimo)
-
-#Calculos de média, máximo e mínimo
+#Calculos de média, máximo e minimo
 media = np.average(resultados)
-maximo = np.amax(resultados)
-minimo = np.amin(resultados)
+maximo = np.amax(resultados.astype(int))
+minimo = np.amin(resultados.astype(int))
+
+print('Média dos resultados: ', media, '\nMaior resultado: ', maximo, '\nMenor resultado: ', minimo)
 
 #Resultados que sairam e a frequência 
-numUnico, frequencia = np.unique(resultados, return_counts=True)
-print('Números:    ', numUnico)
-print('Frequência: ', frequencia)
+numUnico, frequencia = np.unique(resultados.astype(int), return_counts=True)
+
+numsFrequencia = dict(zip(numUnico, frequencia))
+print('Números e Frequências: ', numsFrequencia)
 
 
 #Teste de Hipótese: Agora vamos fazer um pouco de teste de hipóteses:
@@ -39,9 +38,7 @@ Supondo um jogo justo (ou seja, todos os lançamentos são igualmente prováveis
  
 Sim ele coincide, porque os números que mais aparecem são 7,6,8. E estes números aparecem mais, por possuírem mais combinações.
  
- 
 O que isso significa para um jogador do jogo de dados?
  
-Significa que existe a probabilidade de números específicos saírem mais vezes do que os demais, embora ainda devemos considerar o fator "sorte", que também não pode ser descartado neste tipo de jogo.
-
+Significa que existe a probabilidade de números específicos saírem mais vezes do que os demais, embora ainda devemos considerar o fator "sorte", que também não pode ser descartado.
 """
