@@ -33,7 +33,7 @@ print('Números e Frequências: ', numsFrequencia)
 
 #Teste de Hipótese: Agora vamos fazer um pouco de teste de hipóteses:
 
-""  
+"""
 Supondo um jogo justo (ou seja, todos os lançamentos são igualmente prováveis), o resultado da sua simulação coincide com essa suposição? Por que sim ou por que não?
  
 Sim ele coincide, porque os números que mais aparecem são 7,6,8. E estes números aparecem mais, por possuírem mais símbolos.
@@ -41,5 +41,5 @@ Sim ele coincide, porque os números que mais aparecem são 7,6,8. E estes núme
 O que isso significa para um jogador do jogo de dados?
  
 Significa que existe uma probabilidade de números específicos saírem mais vezes do que os demais, embora ainda seja necessário considerar o fator "sorte", que também não pode ser descartado.
-""
+"""
  
